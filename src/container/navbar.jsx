@@ -8,7 +8,7 @@ const [search,setSearch ] = useState("")
 const searchMovie=e=>{
   e.preventDefault();
   show(` https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${search}`)
-  console.log(search);
+  
 }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

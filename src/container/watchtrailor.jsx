@@ -10,15 +10,15 @@ const WatchTrailor = () => {
     const [trailor, settrailor] = useState({});
     useEffect(() => {
         //api request
-        console.log(process.env);
+        
         const getData=(async ()=>{
                const res= await  axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
                results=(await res.data.results)
-               console.log(results)
+               
                settrailor(results.filter((obj)=>
                    obj.type=="Trailer"&&obj.site=="YouTube"
                )[0]);
-               console.log("trailor",trailor)
+               
         });
         getData();
       

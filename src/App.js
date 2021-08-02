@@ -26,7 +26,7 @@ function App() {
     // const data = await res.data;
     axios.get(apilink + `&language=en-US&page=${page}`).then((res) => {
       const data = res.data;
-      console.log("recieved data " + data);
+      // console.log("recieved data " + data);
       setgridItems(data.results);
       settotal_pages(data.total_pages);
       settotal_results(data.total_results);
@@ -81,13 +81,13 @@ function App() {
 
   const showGenre = (genre_id) => {
     const genre = genres.filter((genre) => genre.id === genre_id)[0];
-    console.log(genre_id);
-    console.log(genre.id);
+    // console.log(genre_id);
+    // console.log(genre.id);
     setCategory(genre.name);
     setApiLink(
       `https://api.themoviedb.org/3/discover/movie?api_key=${key}&sort_by=popularity.desc&with_genres=${genre.id}`
     );
-    console.log("genr");
+    // console.log("genr");
     setpageNo(1);
     getMovies(
       `https://api.themoviedb.org/3/discover/movie?api_key=${key}&sort_by=popularity.desc&with_genres=${genre.id}`
