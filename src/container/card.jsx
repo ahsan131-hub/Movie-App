@@ -42,15 +42,12 @@ const Card = ({img_src,title,overview,movie_id}) => {
                      <p>{overview}</p>
                 </div>
                 <div className="options">   
-                    <Link to={`/view-more/${movie_id}`}>view more</Link>
-                    <Link to= {`/watch-trailor/${movie_id}`}>watch trailor</Link>
+                    <Link className='option-a' to={`/view-more/${movie_id}`}>view more</Link>
+                    <Link  className='option-a' to= {`/watch-trailor/${movie_id}`}>watch trailor</Link>
                 </div>
             </div>
             </div>
-
-         
-            
-            </>
+        </>
         
     )
 }

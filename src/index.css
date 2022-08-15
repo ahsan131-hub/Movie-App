@@ -66,11 +66,12 @@ figure > figcaption {
   overflow: hidden;
   max-height: 250px;
   line-height: 1.8em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+  -webkit-touch-callout:none; /* iOS Safari */
+  -webkit-user-select:none;   /* Chrome/Safari/Opera */
+  -khtml-user-select:none;    /* Konqueror */
+  -moz-user-select:none;      /* Firefox */
+  -ms-user-select:none;       /* Internet Explorer/Edge */
+  user-select:none;       
 }
 .card-details p {
   font-size: 1.1em;
@@ -85,15 +86,18 @@ figure > figcaption {
   color: #333;
   border-bottom: #333 solid 1px;
 }
-
-.options a:hover {
-  cursor: pointer;
-  display: inline-block;
+.option-a{
+  pointer-events: none ;
+  -webkit-touch-callout:none; /* iOS Safari */
+  -webkit-user-select:none;   /* Chrome/Safari/Opera */
+  -khtml-user-select:none;    /* Konqueror */
+  -moz-user-select:none;      /* Firefox */
+  -ms-user-select:none;       /* Internet Explorer/Edge */
+  user-select:none;    
 }
 .trailor-div {
-  background-color: black;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  margin:50px;
 }
 .trailor-heading {
   display: flex;
@@ -103,9 +107,9 @@ figure > figcaption {
   text-shadow: 0px 4px 4px #282828;
 }
 .back-button {
-  background-color: black;
-  border: none;
-  color: #333;
+  background-color: whitesmoke;
+  min-height: 20px;
+  min-width: 30px;
 }
 .back-button:hover {
   border-bottom: solid 1px #333;
@@ -114,10 +118,8 @@ figure > figcaption {
 /* //view more details of movie*/
 .view-more {
   height: 100%;
-  width: 100%;
   margin: 0px;
   color: #a19f9f;
-  background-color: black;
 }
 .view-more {
   padding-left: 15%;

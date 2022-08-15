@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect,useState } from 'react';
 import { useParams ,useHistory} from 'react-router-dom'
 import YouTube from 'react-youtube';
+
 const WatchTrailor = () => {
     const {movie_id} = useParams();
     let history = useHistory();
